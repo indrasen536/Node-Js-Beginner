@@ -19,6 +19,7 @@ const port = process.env.PORT || 5000;
 app.use(express.json());
 //express.json() is an inbuilt middleware that will convert in the incoming data stream to json format
 app.use("/api/contacts", require("./routes/apiRoutes"));
+app.use("/api/users", require("./routes/userRoutes"));
 //app.use is a middleware which will route the requests to the respective routes
 app.use(errorHandler);
 
